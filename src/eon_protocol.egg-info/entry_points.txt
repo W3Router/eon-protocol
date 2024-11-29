@@ -1,0 +1,2 @@
+[console_scripts]
+eon = eon.cli:main

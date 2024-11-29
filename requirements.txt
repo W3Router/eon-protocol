@@ -1,0 +1,6 @@
+numpy
+pandas
+pyspark
+pytest
+pybind11
+cmake

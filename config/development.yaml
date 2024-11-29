@@ -1,0 +1,39 @@
+```yaml
+app:
+  name: "eon-protocol"
+  version: "0.1.0"
+  debug: true
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+
+coordinator:
+  host: "0.0.0.0"
+  port: 50051
+  max_workers: 10
+
+compute_node:
+  host: "0.0.0.0"
+  port: 50052
+  max_workers: 5
+
+fhe:
+  poly_modulus_degree: 8192
+  coeff_mod_bit_sizes: [60, 40, 40, 60]
+  scale: 40
+
+storage:
+  path: "./data"
+  max_size: "10GB"
+
+logging:
+  level: "DEBUG"
+  file: "logs/eon.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+security:
+  jwt_secret: "${JWT_SECRET}"
+  token_expire_hours: 8
+```

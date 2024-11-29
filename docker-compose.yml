@@ -1,0 +1,47 @@
+```yaml
+version: '3.8'
+
+services:
+  coordinator:
+    build: .
+    command: eon start -c config/production.yaml -r coordinator
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - EON_ENV=production
+    restart: unless-stopped
+
+  compute-1:
+    build: .
+    command: eon start -c config/production.yaml -r compute -n node-1
+    ports:
+      - "50052:50052"
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - EON_ENV=production
+    depends_on:
+      - coordinator
+    restart: unless-stopped
+
+  api:
+    build: .
+    command: uvicorn eon.api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - EON_ENV=production
+    depends_on:
+      - coordinator
+    restart: unless-stopped
+```

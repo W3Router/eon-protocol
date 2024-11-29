@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/eon_protocol.egg-info/PKG-INFO
+src/eon_protocol.egg-info/SOURCES.txt
+src/eon_protocol.egg-info/dependency_links.txt
+src/eon_protocol.egg-info/entry_points.txt
+src/eon_protocol.egg-info/requires.txt
+src/eon_protocol.egg-info/top_level.txt
+tests/test_basic.py
+tests/test_encryption.py
