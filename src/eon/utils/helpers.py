@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any, Optional
 import json
 import hashlib
@@ -72,4 +72,3 @@ class Timer:
     def elapsed(self) -> float:
         """获取经过时间"""
         return time.time() - self.start_time
-```

@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, List, Any, Optional
 import threading
 import logging
@@ -137,4 +137,4 @@ class NodeManager:
                 self.nodes.clear()
         except Exception as e:
             self.logger.error(f"关闭连接失败: {str(e)}")
-```
+

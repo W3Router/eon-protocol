@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any, Optional
 import jwt
 from datetime import datetime, timedelta
@@ -55,4 +55,3 @@ class AuthHandler:
                 status_code=401,
                 detail="Invalid authentication credentials"
             )
-```

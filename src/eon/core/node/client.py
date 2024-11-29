@@ -1,4 +1,4 @@
-```python
+
 import grpc
 from typing import Dict, Any, Optional
 import logging
@@ -74,4 +74,3 @@ class ComputationClient:
             self.channel.close()
         except Exception as e:
             self.logger.error(f"关闭通信通道失败: {str(e)}")
-```

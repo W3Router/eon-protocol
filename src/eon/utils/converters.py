@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any, Union, List
 import numpy as np
 import pandas as pd
@@ -60,4 +60,3 @@ class DataConverter:
             return arr.reshape(data['shape'])
         else:
             return pd.read_json(json_str)
-```

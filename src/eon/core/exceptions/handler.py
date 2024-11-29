@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any
 from fastapi import Request, FastAPI
 from fastapi.responses import JSONResponse
@@ -51,4 +51,4 @@ class ErrorHandler:
                 "details": getattr(exc, 'details', None)
             }
         )
-```
+

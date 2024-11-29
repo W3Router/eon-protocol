@@ -1,4 +1,4 @@
-```python
+
 from pydantic import BaseModel, Field
 from typing import Dict, Any, Optional
 from enum import Enum
@@ -33,4 +33,4 @@ class TaskStatusResponse(BaseModel):
         json_encoders = {
             datetime: lambda v: v.isoformat()
         }
-```
+

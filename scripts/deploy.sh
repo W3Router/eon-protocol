@@ -1,4 +1,4 @@
-```bash
+
 #!/bin/bash
 
 # 设置环境变量
@@ -45,4 +45,3 @@ case "$1" in
         exit 1
         ;;
 esac
-```

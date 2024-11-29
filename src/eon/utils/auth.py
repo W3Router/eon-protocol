@@ -1,4 +1,4 @@
-```python
+
 import jwt
 from fastapi import HTTPException, Security
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
@@ -39,4 +39,3 @@ class AuthHandler:
     def auth_wrapper(self, auth: HTTPAuthorizationCredentials = Security(HTTPBearer())):
         """认证包装器"""
         return self.decode_token(auth.credentials)
-```

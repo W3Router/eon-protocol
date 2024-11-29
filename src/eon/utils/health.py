@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any
 import psutil
 import logging
@@ -100,4 +100,4 @@ class HealthChecker:
             'system': system_health,
             'services': service_health
         }
-```
+

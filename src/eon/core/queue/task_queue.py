@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any, Optional, List, Callable
 import asyncio
 from datetime import datetime
@@ -148,4 +148,3 @@ class TaskQueue:
                 age = (current_time - task.completed_at).total_seconds() / 3600
                 if age > max_age_hours:
                     del self.tasks[task_id]
-```

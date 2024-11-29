@@ -1,4 +1,4 @@
-```python
+
 import logging
 import sys
 from logging.handlers import RotatingFileHandler
@@ -116,4 +116,3 @@ def setup_logging(config: Dict[str, Any]) -> LoggerManager:
 def get_logger(name: str) -> logging.Logger:
     """获取日志记录器"""
     return LoggerManager().get_logger(name)
-```

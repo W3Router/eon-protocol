@@ -1,4 +1,4 @@
-```python
+
 import pytest
 import numpy as np
 import time
@@ -106,4 +106,3 @@ class TestPerformance:
             'final_memory': final_memory,
             'memory_increase': memory_increase
         }
-```

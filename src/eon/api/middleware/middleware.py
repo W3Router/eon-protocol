@@ -1,4 +1,4 @@
-```python
+
 from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 import time
@@ -65,4 +65,3 @@ class CORSMiddleware(BaseHTTPMiddleware):
         response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
         
         return response
-```

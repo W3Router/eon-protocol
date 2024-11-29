@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any, Optional, List
 import numpy as np
 from enum import Enum
@@ -93,4 +93,3 @@ class DataValidator:
             'mean_value': float(np.nanmean(data)),
             'std_value': float(np.nanstd(data))
         }
-```

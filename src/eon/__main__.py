@@ -1,4 +1,4 @@
-```python
+
 import argparse
 import logging
 from pathlib import Path
@@ -72,4 +72,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-```

@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any, List
 import time
 from collections import defaultdict
@@ -104,4 +104,3 @@ class MetricsCollector:
         """清除指标数据"""
         with self.lock:
             self.metrics.clear()
-```

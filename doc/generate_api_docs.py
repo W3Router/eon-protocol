@@ -1,4 +1,4 @@
-```python
+
 from fastapi.openapi.utils import get_openapi
 from eon.api.main import app
 import json
@@ -57,4 +57,3 @@ def generate_markdown_docs():
 if __name__ == '__main__':
     generate_openapi_spec()
     generate_markdown_docs()
-```

@@ -1,4 +1,4 @@
-```python
+
 import pytest
 import numpy as np
 from eon.core.fhe.engine import FHEEngine
@@ -66,4 +66,3 @@ def test_batch_processing():
     result = engine.compute(encrypted, "mean")
     decrypted = engine.decrypt(result)
     np.testing.assert_almost_equal(np.mean(data), decrypted, decimal=4)
-```

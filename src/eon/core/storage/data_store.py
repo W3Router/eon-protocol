@@ -1,4 +1,4 @@
-```python
+
 from typing import Dict, Any, Optional, List
 from pathlib import Path
 import json
@@ -142,4 +142,3 @@ class DataStore:
         except Exception as e:
             self.logger.error(f"Failed to cleanup data: {str(e)}")
             raise
-```

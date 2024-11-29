@@ -1,4 +1,4 @@
-```yaml
+
 app:
   name: "eon-protocol"
   version: "0.1.0"
@@ -36,4 +36,3 @@ logging:
 security:
   jwt_secret: "${JWT_SECRET}"
   token_expire_hours: 8
-```

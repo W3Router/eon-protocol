@@ -1,4 +1,4 @@
-```python
+
 import grpc
 from concurrent import futures
 from typing import Dict, Any
@@ -62,4 +62,3 @@ class ComputationServicer(computation_pb2_grpc.ComputationServiceServicer):
                 success=False,
                 error_message=str(e)
             )
-```

@@ -1,4 +1,4 @@
-```python
+
 from fastapi import FastAPI, HTTPException, Depends
 from typing import Dict, Any, Optional
 import logging
@@ -82,4 +82,3 @@ async def health_check():
             "status": "unhealthy",
             "error": str(e)
         }
-```

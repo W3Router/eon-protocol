@@ -1,4 +1,4 @@
-```python
+
 import pickle
 import base64
 from typing import Any
@@ -43,4 +43,3 @@ class Serializer:
         except Exception as e:
             self.logger.error(f"Failed to deserialize numpy array: {str(e)}")
             raise
-```
