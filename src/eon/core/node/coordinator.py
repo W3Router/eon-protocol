@@ -2,8 +2,10 @@ import grpc
 from concurrent import futures
 from typing import Dict, List, Any
 import logging
-from .proto import computation_pb2_grpc
+
 from ..fhe.engine import FHEEngine
+# 在 client.py 和 coordinator.py 中
+from ..proto import computation_pb2, computation_pb2_grpc
 
 class CoordinatorNode:
     """协调节点，管理分布式计算"""

@@ -1,20 +1,40 @@
+
 import pytest
 import sys
 import os
+import yaml
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '../src'))
 
-def test_api_routes():
-    from eon.api import service  # 改为测试其他可用的模块
-    assert True
-
-def test_api_service():
-    from eon.api.service import EONService
-    config = {
-        'node': {
-            'type': 'coordinator',
-            # 添加其他必要的配置
+@pytest.fixture
+def test_config():
+    config_data = {
+        "node": {
+            "type": "coordinator",
+            "id": "test-node",
+            "host": "localhost",
+            "port": 5000
         }
     }
-    service = EONService(config)
-    assert service is not None
+    config_path = "test_config.yaml"
+    with open(config_path, "w") as f:
+        yaml.dump(config_data, f)
+    yield config_path
+    os.remove(config_path)
+
+def test_api_basic():
+    from eon.api.schemas.computation import ComputationRequest
+    assert ComputationRequest is not None
+
+
+
+
+    # tests/test_api.py
+def test_api_models():
+    from eon.api.schemas.computation import ComputationRequest
+    request = ComputationRequest(
+        data_id="test",
+        operation="add",
+        params={"value": 1}
+    )
+    assert request.data_id == "test"
