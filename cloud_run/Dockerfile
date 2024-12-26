@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy and install eon-protocol
+# Copy entire project context
 COPY .. /eon-protocol/
 WORKDIR /eon-protocol
 RUN pip install -e .
